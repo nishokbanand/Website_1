@@ -1,0 +1,20 @@
+$primary-color: #0074d9;
+$secondary-color: #dddddd;
+$sucess: #2ecc40;
+$Danger: #ff4136;
+$black: #111111;
+$orange: #ff851b;
+$purple: #b10dc9;
+
+@function set-text-colour($color) {
+  @if (ligtness($color) >60) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-colour($color);
+}
